@@ -113,7 +113,7 @@ Requiere emparejar el robot antes desde los Ajustes de Bluetooth de Android. No 
 
 | Sección | Respuesta |
 | --- | --- |
-| **Política de privacidad** | URL pública de `PRIVACY.md` en GitHub (por ejemplo `https://github.com/<usuario>/<repo>/blob/main/PRIVACY.md`) |
+| **Política de privacidad** | <https://github.com/xchristx/hanna-sumo-rc/blob/main/PRIVACY.md> |
 | **Acceso a la app** | Toda la funcionalidad está disponible sin restricciones (no hay login). Aclara en notas que necesita un robot con HC-05 emparejado. |
 | **Anuncios** | No contiene anuncios |
 | **Clasificación de contenido** | Cuestionario IARC: categoría *Utilidad/Herramienta*, todo "No" → clasificación para todos |
