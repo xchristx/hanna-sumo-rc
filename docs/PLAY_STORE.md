@@ -5,7 +5,7 @@ Android Studio).
 
 ## 0. Antes de empezar
 
-- **Package name:** `com.hannasumo.rc` (en `app.json`). **No se puede cambiar** después de
+- **Package name:** `com.chrisreactdev.hannasumorc` (en `app.json`, cuenta de Play «Chris React Dev»). **No se puede cambiar** después de
   la primera subida a Play. Si lo quieres distinto, cámbialo ahora.
 - **Cuenta de desarrollador de Google Play** (pago único de 25 USD).
 - **Cuentas personales nuevas:** Google exige una **prueba cerrada con al menos 12

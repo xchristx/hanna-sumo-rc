@@ -11,7 +11,7 @@
       "android"
     ],
     "android": {
-      "package": "com.hannasumo.rc",
+      "package": "com.chrisreactdev.hannasumorc",
       "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#0A0A0C",
@@ -61,6 +61,16 @@
       "./plugins/withBluetoothClassicBuildConfig",
       "./plugins/withWindowsCMake",
       "expo-status-bar"
-    ]
+    ],
+    "extra": {
+      "expo-navigation-bar": {
+        "style": "light",
+        "hidden": true
+      },
+      "eas": {
+        "projectId": "b2111172-08ae-4e6c-96bd-b5c95c521df8"
+      }
+    },
+    "owner": "xchrist"
   }
 }
