@@ -12,7 +12,6 @@
     ],
     "android": {
       "package": "com.chrisreactdev.hannasumorc",
-      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#0A0A0C",
         "foregroundImage": "./assets/android-icon-foreground.png",
