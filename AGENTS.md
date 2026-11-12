@@ -23,11 +23,14 @@ npx expo install --fix      # fix incompatible package versions
 
 Run lint and typecheck before declaring any task done.
 
-## Navigation & Routing
+## Project layout (Hanna Sumo RC)
 
-- Use **Expo Router** for all navigation. Routes live in `src/app/` — every file there is a screen, `_layout.tsx` files define navigators. Keep non-route code (components, hooks, utils) outside `src/app/`.
-- Import `Link`, `router`, and `useLocalSearchParams` from `expo-router`.
-- Docs: https://docs.expo.dev/router/introduction.md
+- Android-only, landscape, Bluetooth Classic (HC-05) robot controller. No Expo Router: `App.tsx` switches between three screens in `src/screens/` with plain state and handles the Android back button.
+- `src/bluetooth/` service + protocol (`L,R\n` at 20 Hz, robot answers `OK\n`), `src/hooks/`, `src/components/`, `src/logic/` (pure drive math).
+- Control-screen inputs must use `react-native-gesture-handler` (not `Pressable`) so sliders and buttons work simultaneously. Inputs are written to a ref (`useDriveInput`) and read by the 20 Hz loop (`useDriveLoop`); never drive the send loop from React state.
+- Control modes (`ControlMode` in `src/logic/drive.ts`): `tank`, `joystick`, `dpad` (arrow buttons, digital, mixed with `arcadeMix`).
+- Play Store: `production` EAS profile builds an AAB with remote `versionCode`; publishing steps in `docs/PLAY_STORE.md`, store graphics in `store/`. Never commit `google-play-service-account.json`.
+- Firmware lives in `firmware/` (Arduino Nano, `arduino:avr:nano:cpu=atmega328old`); keep its comments in Spanish.
 
 ## Building with EAS
 

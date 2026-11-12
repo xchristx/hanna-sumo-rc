@@ -39,3 +39,9 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Play Store / EAS: nunca subir llaves ni binarios
+google-play-service-account.json
+*service-account*.json
+*.apk
+*.aab

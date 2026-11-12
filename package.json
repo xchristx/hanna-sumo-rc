@@ -1,22 +1,48 @@
 {
-  "name": "scaffold",
+  "name": "hanna-sumo-rc",
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
-    "expo": "~58.0.23",
-    "expo-status-bar": "~58.0.4",
+    "@expo-google-fonts/barlow-condensed": "^0.4.1",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "~58.0.25",
+    "expo-dev-client": "~58.0.20",
+    "expo-font": "~58.0.12",
+    "expo-haptics": "~58.0.8",
+    "expo-keep-awake": "~58.0.4",
+    "expo-navigation-bar": "~58.0.4",
+    "expo-screen-orientation": "~58.0.4",
+    "expo-splash-screen": "~58.0.14",
+    "expo-status-bar": "~58.0.5",
+    "expo-system-ui": "~58.0.7",
     "react": "19.3.0",
-    "react-native": "0.88.1"
+    "react-native": "0.88.1",
+    "react-native-bluetooth-classic": "^1.73.0-rc.17",
+    "react-native-gesture-handler": "~3.3.0",
+    "react-native-safe-area-context": "~5.11.1"
   },
   "devDependencies": {
     "@types/react": "~19.3.0",
+    "eslint": "^9.0.0",
+    "eslint-config-expo": "~58.0.4",
     "typescript": "~6.0.3"
   },
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "android:release": "expo run:android --variant release",
+    "typecheck": "tsc --noEmit",
+    "doctor": "expo-doctor",
+    "lint": "expo lint"
   },
-  "private": true
+  "private": true,
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": [
+          "react-native-bluetooth-classic"
+        ]
+      }
+    }
+  }
 }
